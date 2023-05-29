@@ -1,5 +1,53 @@
 1 - What is the OSI model?
     The OSI model is a conceptual model that characterizes the communication functions of a telecommunication system without regard to their underlying internal structure and technology
+
     How is the OSI model organized?
     From the lowest to the highest level
 
+2 - What type of network a computer in local is connected to?
+    LAN
+
+    What type of network could connect an office in one building to another office in a building a few streets away?
+    WAN
+
+    What network do you use when you browse www.google.com from your smartphone (not connected to the Wifi)?
+    Internet
+
+3 - What is a MAC address?
+    The unique identifier of a network interface
+
+    What is an IP address?
+    Is to devices connected to a network what postal address is to houses
+
+4 - Which statement is correct for the TCP box:
+    It is a protocol that is transferring data in a slow way but surely
+
+    Which statement is correct for the UDP box:
+    It is a protocol that is transferring data in a fast way and might loss data
+
+    Which statement is correct for the TCP worker:
+    Have you received boxes x, y, z?
+
+5 - Bash script that displays listening ports:
+    That only shows listening sockets
+    That shows the PID and name of the program to which each socket belongs
+
+    #!/usr/bin/env bash
+    # script that displays listening ports
+    sudo netstat -lt
+
+
+6 - Bash script that pings an IP address passed as an argument.
+
+    Accepts a string as an argument
+    Displays Usage: 5-is_the_host_on_the_network {IP_ADDRESS} if no argument passed
+    Ping the IP 5 times
+    
+    #!/usr/bin/env bash
+    # script that pings an IP address passed as an argument
+    if [ -z "$1" ]
+    then
+        echo "5-is_the_host_on_the_network {IP_ADDRESS}"
+    else
+        ping -c 5 "$1"
+    fi
